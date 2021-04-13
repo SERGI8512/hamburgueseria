@@ -32,6 +32,11 @@ img {
     display: block;
 }
 
+main p{
+    color: #666;
+    line-height: 1.25em;
+}
+
 body {
     font-family: var(--fuente-principal);
     font-size: var(--fontsize);
@@ -257,7 +262,44 @@ main #ourservices .grid{
 }
 
 main #ourservices .grid article{
-    
+    border-bottom: 1px solid #aaa;
+    padding: 1.5em 0;
+}
+
+main section h3{
+    font-weight: 700;
+    font-size: 1.10em;
+    margin: var(--padding) 0;
+
+}
+
+.enlace{
+    text-decoration: none;
+    padding-top: var(--padding);
+    display: inline-block;
+    font-weight: 700;
+    color: var(--color-principal);
+    border: none;
+}
+
+.enlace:hover i{
+transform: translateX(5px);
+transition: 1s;
+}
+
+.enlace i{
+    transition: 1s;
+}
+
+main #ourservices article>div .fas{
+    font-size: 1.5em;
+    color: var(--color-principal);
+    padding: 0.5em;
+    border: 1px solid var(--color-principal);
+}
+
+.fa-truck{
+    transform: rotateY(180deg);
 }
 
 
@@ -272,6 +314,12 @@ main #ourservices .grid article{
     }
     main #ourservices .grid article:last-child{
         grid-column: 1/3;
+    }
+    main #ourservices .grid article{
+        border-bottom: none;
+        border-left: 1px solid #aaa;
+        padding: 0 1.5em;
+
     }
 }
 
