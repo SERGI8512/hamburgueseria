@@ -205,7 +205,7 @@ footer a:hover{
     padding: 1.15em;
     margin: var(--margingrid) 0px;
     text-decoration: none;
-    border: 1px solid var(--color-secundario)
+    border: 1px solid var(--color-principal)
 }
 .boton:hover{
     background-color: transparent;
@@ -302,9 +302,36 @@ main #ourservices article>div .fas{
     transform: rotateY(180deg);
 }
 
-
-
 /* Final Servicios */
+
+/* Inicio About Us*/
+
+main section:last-child{
+    padding-bottom: 70px; /* Siempre que tenemos un pie de página "fixed" hay que ponerle un paddding-bottom para que no tape el contenido de abajo de la ultima sección */
+}
+
+main section h4{
+    color: var(--color-principal);
+    margin: var(--margingrid) 0;
+}
+
+main section .flex{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Final About Us*/
 
 /* mediaqueries */
 
@@ -321,6 +348,14 @@ main #ourservices article>div .fas{
         padding: 0 1.5em;
 
     }
+    main section .flex{
+        flex-direction: row;
+    }
+
+    main section .flex .columna{
+        margin: 0 var(--margingrid)
+    }
+
 }
 
 @media(min-width:768px) {
