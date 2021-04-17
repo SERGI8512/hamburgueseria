@@ -133,6 +133,7 @@ header nav .menu li a{
     border-bottom: 1px solid #aaa;
 }
 
+
 header nav .menu li .activo, header nav .menu li a:hover{ 
     color: var(--color-principal);
 }
@@ -171,14 +172,14 @@ footer a:hover{
 
 /* Final Footer */
 
-/* Principio Our Blog */
+/* Principio Titulo Our Blog */
 
 main section h2{
     color: black;
     font-family: var(--fuente-secundaria);
     font-size: 2em;
     text-align: center;
-    margin-top: -10px;
+    margin-top: -0.25em;
 }
 
 
@@ -204,59 +205,64 @@ main section .underline hr{
     border-color: var(--color-principal);
 }
 
+/* Final Título Our Blogs */
+
+/* Principio sección Our Blogs */
+
+main .grid{
+    display: grid;
+    gap: var(--margingrid);
+    margin-bottom: 70px;
+}
+
+main .grid h3{
+color: var(--color-principal);
+}
+
+main article a{
+    color: var(--color-principal);
+    text-decoration: none;
+    font-style: bold;
+
+}
 
 
 
 
 
 
-/* Final Our Blogs */
+
+/* Final sección Our Blogs */
 
 /* mediaqueries */
 
-@media(min-width:600px) {
-    main #ourservices .grid{
+@media(max-width:700px) {
+    main .grid{
         grid-template-columns: repeat(2, 1fr);
     }
-    main #ourservices .grid article:last-child{
-        grid-column: 1/3;
+    main .grid article:last-child{
+        grid-column: 1/2;
     }
-    main #ourservices .grid article{
+    main .grid article{
         border-bottom: none;
-        border-left: 1px solid #aaa;
         padding: 0 1.5em;
+        margin-bottom: 70px;
 
     }
-    main section .flex{
+    main .grid{
         flex-direction: row;
-    }
-
-    main section .flex .columna{
-        margin: 0 var(--margingrid)
-    }
-    .columna{
-        width: 50%;
+        margin: 0 var(--margingrid);
     }
 }
 
-@media(min-width:768px) {
+
+@media(min-width:701px) {
     header .nav-top a span{
         display: inline;
         color: white;
         font-size: 120%;
         margin-left: 5px; /* Lo ponemos para separar más el icono de la palabra */
     }
-    
-    main #ourservices .grid{
-        grid-template-columns: repeat(3, 1fr);
-    }
-    main #ourservices .grid article:last-child{
-        grid-column: 3/4;
-    }
-
-}
-
-@media(min-width:1004px) {
     
     header nav .hamburguesa{
     display: none;
@@ -286,4 +292,11 @@ main section .underline hr{
        margin-top: 10px;
         
     }
+    main .grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    main .grid article:last-child{
+        grid-column: 3/4;
+    }
+    
 }
