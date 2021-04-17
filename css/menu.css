@@ -40,7 +40,6 @@ main p{
 body {
     font-family: var(--fuente-principal);
     font-size: var(--fontsize);
-    margin: 0px;
 
 }
 
@@ -51,16 +50,9 @@ body {
 
 /* Inicio Header */
 
-header{
-    width: 100%;
-}
-
-
 header .nav-top {
     background-color: var(--color-secundario);
     padding: calc(var(--padding) * 2) 0px;
-    width: 100%;
-
 }
 
 header .nav-top .container {
@@ -106,22 +98,9 @@ header nav .hamburguesa div {
     width: 1.875em;
 }
 
-header nav .container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
 header nav ul{
     width: 100%;
-    padding: 0;
 }
-
-header nav .menu{
-    list-style: none;
-    margin: 0px 0px;
-}
-
 
 header nav .menu li a{
     display: block;
@@ -132,7 +111,9 @@ header nav .menu li a{
     color: #aaa;
     border-bottom: 1px solid #aaa;
 }
-
+header nav .menu li:last-child a{
+    border-bottom: none;
+}
 
 header nav .menu li .activo, header nav .menu li a:hover{ 
     color: var(--color-principal);
@@ -144,7 +125,7 @@ header nav .menu li .activo, header nav .menu li a:hover{
 
 footer{
     background-color: var(--color-secundario);
-    padding: 0em;
+    padding: 1em;
     color: white;
     text-align: center;
     position: fixed;
@@ -170,115 +151,6 @@ footer a:hover{
 }
 
 /* Final Footer */
-
-/* Principio Titulo Our Blog */
-
-main section h2{
-    color: black;
-    font-family: var(--fuente-secundaria);
-    font-size: 2em;
-    text-align: center;
-    margin-top: -0.25em;
-}
-
-
-main section h2 span{
-    color: var(--color-principal);
-}
-
-main section .underline{
-    position: relative;
-    width: 6.250em;
-    margin: 0 auto;
-    color: var(--color-principal);
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: var(--margingrid);
-    margin-top: -30px;
-}
-
-main section .underline hr{
-    position: absolute;
-    width: 100%;
-    top: 1px;
-    border-color: var(--color-principal);
-}
-
-/* Final Título Our Blogs */
-
-/* Principio sección Our Blogs */
-
-main .grid{
-    display: grid;
-    gap: var(--margingrid);
-    margin-bottom: 70px;
-}
-
-main .grid h3{
-
-margin-left: 5px;
-}
-
-main .grid h4{
-    color: var(--color-principal);
-    margin-left: 5px;
-}
-
-main .grid p{
-    margin-left: 5px;
-}
-
-main article a{
-    color: var(--color-principal);
-    text-decoration: none;
-    font-style: bold;
-  
-
-}
-
-main .container .grid article .fecha{
-    grid-template-columns: (2, 1fr);
-    background-color: var(--color-principal);
-    width: 75px;
-    height: 75px;
-    position: absolute;
-    text-align: center;
-    top: 459px;
-    margin-left: 0px;
-    opacity: 70%;
-    color: white;
-    font-size: 1.6em;
-    font-weight: bold;
-    color: white;
-}
-
-main .container .grid article .fecha3{
-    grid-template-columns: (2, 1fr);
-    background-color: var(--color-principal);
-    width: 75px;
-    height: 75px;
-    position: absolute;
-    text-align: center;
-    top: 1012px;
-    margin-left: 0px;
-    opacity: 70%;
-    color: white;
-    font-size: 1.6em;
-    font-weight: bold;
-    color: white;
-}
-
-
-
-
-
-
-
-
-
-/* Final sección Our Blogs */
-
-/* mediaqueries */
 
 @media(max-width:700px) {
     main .grid{
@@ -329,6 +201,7 @@ main .container .grid article .fecha3{
     }
     footer{
         text-align: left;
+        padding-left: 1em;
     }
     main section h2{
        margin-top: 10px;
