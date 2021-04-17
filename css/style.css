@@ -125,7 +125,8 @@ header nav .menu li .activo, header nav .menu li a:hover{
 
 footer{
     background-color: var(--color-secundario);
-    padding: calc(var(--padding) * 2) 0px;
+    padding-top: 0;
+    padding-left: 1em;
     color: white;
     text-align: center;
     position: fixed;
