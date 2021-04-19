@@ -40,7 +40,6 @@ main p{
 body {
     font-family: var(--fuente-principal);
     font-size: var(--fontsize);
-    margin: 0px;
 
 }
 
@@ -51,16 +50,9 @@ body {
 
 /* Inicio Header */
 
-header{
-    width: 100%;
-}
-
-
 header .nav-top {
     background-color: var(--color-secundario);
     padding: calc(var(--padding) * 2) 0px;
-    width: 100%;
-
 }
 
 header .nav-top .container {
@@ -106,22 +98,9 @@ header nav .hamburguesa div {
     width: 1.875em;
 }
 
-header nav .container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
 header nav ul{
     width: 100%;
-    padding: 0;
 }
-
-header nav .menu{
-    list-style: none;
-    margin: 0px 0px;
-}
-
 
 header nav .menu li a{
     display: block;
@@ -132,7 +111,9 @@ header nav .menu li a{
     color: #aaa;
     border-bottom: 1px solid #aaa;
 }
-
+header nav .menu li:last-child a{
+    border-bottom: none;
+}
 
 header nav .menu li .activo, header nav .menu li a:hover{ 
     color: var(--color-principal);
@@ -144,12 +125,13 @@ header nav .menu li .activo, header nav .menu li a:hover{
 
 footer{
     background-color: var(--color-secundario);
-    padding: 0em;
+    padding: 0 1em 1em 1em;
     color: white;
     text-align: center;
     position: fixed;
     bottom: 0;
     width: 100%;
+    
 }
 footer a{
     color: white;
@@ -171,22 +153,25 @@ footer a:hover{
 
 /* Final Footer */
 
-/* Principio Titulo Our Blog */
+/* Inicio Menu */
+main{
+    background-color: var(--color-secundario);
 
-main section h2{
-    color: black;
+}
+
+main h2{
+    color: white;
     font-family: var(--fuente-secundaria);
     font-size: 2em;
     text-align: center;
-    margin-top: -0.25em;
+    padding-top: 0.5em;
 }
 
-
-main section h2 span{
+main h2 span{
     color: var(--color-principal);
 }
 
-main section .underline{
+main .underline{
     position: relative;
     width: 6.250em;
     margin: 0 auto;
@@ -194,78 +179,95 @@ main section .underline{
     font-weight: 700;
     text-align: center;
     margin-bottom: var(--margingrid);
-    margin-top: -30px;
 }
 
-main section .underline hr{
+main .underline hr{
     position: absolute;
     width: 100%;
-    top: 1px;
+    top: -1px;
+    border-color: var(--color-principal);
+}
+main .underline2{
+    position: relative;
+    width: 6.250em;
+    margin: 0 5px;
+    color: var(--color-principal);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: var(--margingrid);
+}
+
+main .underline2 hr{
+    position: absolute;
+    width: 100%;
+    top: -1px;
     border-color: var(--color-principal);
 }
 
-/* Final Título Our Blogs */
+.container .comida{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
 
-/* Principio sección Our Blogs */
-
-main .grid{
+.container .comida li a{
     display: grid;
-    gap: var(--margingrid);
-    margin-bottom: 70px;
+    width: 100%;
+    text-decoration: none;
+    text-align: left;
+    padding: calc(var(--padding) * 2);
+    color: white;
+    border-radius: 1%;
+}
+.container .comida li a:hover{
+    background-color: var(--color-principal);
 }
 
-main .grid h3{
-
-margin-left: 5px;
+h3{
+    color: white;
+    font-size: 1.5em;
+    font-style: bold;
+    margin-top: 20px;
+    margin-left: 5px;
+    
 }
 
-main .grid h4{
+.container span{
+    position: relative;
+    width: 6.250em;
+    margin: 0 auto;
     color: var(--color-principal);
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: var(--margingrid);
+}
+.container p{
+    color: lightgrey;
     margin-left: 5px;
 }
+.container article{
+    width: 90%;
+    margin: 40px auto 20px auto;
 
-main .grid p{
+}
+.container article p{
     margin-left: 5px;
+    padding: 1em 0;
+    color: lightgrey;
 }
 
-main article a{
+.container article a{
     color: var(--color-principal);
     text-decoration: none;
-    font-style: bold;
-  
-
+    margin-left: 5px;
 }
 
-main .container .grid article .fecha{
-    grid-template-columns: (2, 1fr);
-    background-color: var(--color-principal);
-    width: 75px;
-    height: 75px;
-    position: absolute;
-    text-align: center;
-    top: 459px;
-    margin-left: 0px;
-    opacity: 70%;
-    color: white;
-    font-size: 1.6em;
-    font-weight: bold;
-    color: white;
+.container article:last-child{
+    margin-bottom: 70px;
+   background-color: var(--color-secundario);
 }
 
-main .container .grid article .fecha3{
-    grid-template-columns: (2, 1fr);
-    background-color: var(--color-principal);
-    width: 75px;
-    height: 75px;
-    position: absolute;
-    text-align: center;
-    top: 1012px;
-    margin-left: 0px;
-    opacity: 70%;
-    color: white;
-    font-size: 1.6em;
-    font-weight: bold;
-    color: white;
+.grid2{
+    display: grid;
 }
 
 
@@ -273,31 +275,23 @@ main .container .grid article .fecha3{
 
 
 
-
-
-
-/* Final sección Our Blogs */
-
-/* mediaqueries */
+/* Final Menu */
 
 @media(max-width:700px) {
-    main .grid{
-        grid-template-columns: repeat(2, 1fr);
+    main .grid2{
+        grid-template-columns: repeat(1, 1fr);
     }
-    main .grid article:last-child{
-        grid-column: 1/2;
+    
     }
-    main .grid article{
+    main .grid2 article{
         border-bottom: none;
         padding: 0 1.5em;
         margin-bottom: 70px;
 
     }
-    main .grid{
-        flex-direction: row;
-        margin: 0 var(--margingrid);
-    }
-}
+    
+    
+
 
 
 @media(min-width:701px) {
@@ -329,37 +323,51 @@ main .container .grid article .fecha3{
     }
     footer{
         text-align: left;
+        padding-left: 1em;
     }
     main section h2{
        margin-top: 10px;
         
     }
-    main .grid{
-        grid-template-columns: repeat(3, 1fr);
+    main .grid2.container{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3,1fr);
     }
-    main .grid article:last-child{
-        grid-column: 3/4;
-    }
-    main .container .grid article .fecha{
-        background-color: var(--color-principal);
-        color: white;
-        width: 75px;
-        height: 75px;
-        position: absolute;
-        text-align: center;
-        top: 230px;
-        margin-left: 0px;
-    }
-    main .container .grid article .fecha3{
-        background-color: var(--color-principal);
-        color: white;
-        width: 75px;
-        height: 75px;
-        position: absolute;
-        text-align: center;
-        top: 230px;
-        margin-left: 0px;
-    }
+    .grid2 .comidas .container{
+        grid-column: 1/2;
+        grid-row: 1/3;
     
+    }
+    .grid2 .hotoffers .container{
+        grid-column: 3/5;
+        grid-row: 1/3;
+    }
+    main .grid2.container article .fecha{
+        background-color: var(--color-principal);
+        color: white;
+        width: 75px;
+        height: 75px;
+        position: absolute;
+        text-align: center;
+        top: 230px;
+        margin-left: 0px;
+    }
+    main .grid2 .container article .fecha3{
+        background-color: var(--color-principal);
+        color: white;
+        width: 75px;
+        height: 75px;
+        position: absolute;
+        text-align: center;
+        top: 230px;
+        margin-left: 0px;
+    }
+
+    
+    .container article:last-child{
+    margin-bottom: 70px;
+   background-color: var(--color-secundario);
+}
     
 }
